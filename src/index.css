@@ -1,0 +1,13 @@
+@import "tailwindcss";
+body {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+@theme {
+  --color-nav-black: #646464;
+  --color-primary-blue: #00eeff;
+  --color-card-blue: #defdff;
+  --color-primary-black: #fff;
+  --color-secondary-blue: #002869;
+}
