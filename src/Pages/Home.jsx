@@ -7,8 +7,6 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 
 export default function Home() {
-  const style = "";
-
   const travelData = [
     {
       destination: "Paris",
