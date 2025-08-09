@@ -31,7 +31,7 @@ export default function Card({ destination, price, cardImg, starRating }) {
       </div>
       <div className="flex items-center justify-between">
         <h3 className="font-bold text-2xl">${price}</h3>
-        <Button type="bookNow">Book now</Button>
+        <Button type="bookNow">Book Now</Button>
       </div>
       <div className="flex gap-2">
         <img src={Logo} alt="logo" className="w-5" />
