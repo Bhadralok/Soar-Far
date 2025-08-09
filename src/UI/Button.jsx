@@ -17,7 +17,7 @@ export default function Button({ children, isButton = true, type = "login" }) {
       {isButton ? (
         <button className={`${styles[type]}`}>{children}</button>
       ) : (
-        <div className="flex items-center space-x-2">7746
+        <div className="flex items-center space-x-2">
           <button className="size-15 flex items-center cursor-pointer justify-center white rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
             <MdArrowBack size={20} />
           </button>
