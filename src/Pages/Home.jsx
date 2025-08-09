@@ -91,7 +91,7 @@ export default function Home() {
       </header>
       <main className="pl-20">
         <section className="flex items-start justify-between pr-20">
-          <div className="pt-10 w-[40%] flex flex-col space-y-16">
+          <div className="pt-10 w-[40%] flex flex-col space-y-8">
             <h1 className="text-8xl font-[700]">
               Make your every trip memorable
             </h1>
