@@ -10,49 +10,49 @@ export default function Home() {
   const travelData = [
     {
       destination: "Paris",
-      rating: 4.8,
+      rating: 1,
       price: 1200,
       image:
         "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80", // Panoramic city view
     },
     {
       destination: "Rome",
-      rating: 4.5,
+      rating: 1.5,
       price: 900,
       image:
         "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80", // Ancient architecture
     },
     {
       destination: "Dubai",
-      rating: 4.6,
+      rating: 5,
       price: 1100,
       image:
         "https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?auto=format&fit=crop&w=800&q=80", // Modern skyline & towers
     },
     {
       destination: "London",
-      rating: 4.4,
+      rating: 4.5,
       price: 1300,
       image:
         "https://images.unsplash.com/photo-1495562569060-2eec283d3391?auto=format&fit=crop&w=800&q=80", // Iconic river scene
     },
     {
       destination: "Paris",
-      rating: 4.8,
+      rating: 1,
       price: 1200,
       image:
         "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80", // Panoramic city view
     },
     {
       destination: "Rome",
-      rating: 4.5,
+      rating: 3,
       price: 900,
       image:
         "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80", // Ancient architecture
     },
     {
       destination: "Miami",
-      rating: 4.5,
+      rating: 2,
       price: 1150,
       image:
         "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80", // Beach & skyline
@@ -124,6 +124,7 @@ export default function Home() {
                 price={data.price}
                 cardImg={data.image}
                 destination={data.destination}
+                starRating={data.rating}
               />
             ))}
           </div>
@@ -147,6 +148,7 @@ export default function Home() {
                 price={data.price}
                 cardImg={data.image}
                 destination={data.destination}
+                starRating={data.rating }
               />
             ))}
           </div>
