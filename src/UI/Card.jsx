@@ -15,15 +15,15 @@ export default function Card({ destination, price, cardImg, starRating }) {
         <p className="flex">
           {Array.from({ length: 5 }, (_, i) => {
             if (starRating >= i + 1) {
-              // full star
+              // For the full star
               return <img key={i} src={stars} alt="full star" className="" />;
             } else if (starRating >= i + 0.5) {
-              // half star
+              //I did this for the half star
               return (
                 <img key={i} src={halfStar} alt="half star" className="" />
               );
             } else {
-              // empty star
+              // This is for when the star is empty
               return <img key={i} src={noStar} alt="empty star" className="" />;
             }
           })}

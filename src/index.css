@@ -11,3 +11,34 @@ body {
   --color-primary-black: #fff;
   --color-secondary-blue: #002869;
 }
+
+.gradient-btn {
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  /* Moving gradient background */
+  background: linear-gradient(100deg, #002060, #0040ff, #002060);
+  background-size: 200% 200%;
+  animation: moveGradient 4s ease infinite;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(100deg, #002060, #0040ff, #002060);
+  background-size: 200% 200%;
+  animation: moveGradient 0.5s ease infinite;
+  outline: 3px solid #27d4e1;
+  outline-offset: 3px;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
