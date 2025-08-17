@@ -8,10 +8,16 @@ import { RiInstagramFill } from "react-icons/ri";
 import { useRef } from "react";
 import NavLink from "../UI/NavLink";
 import Footer from "../UI/Footer";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 export default function Home() {
   const carouselRef = useRef(null);
   const carouselRef2 = useRef(null);
+  const heading = useRef(null);
+  const headingText = useRef(null);
+  const headingButton = useRef(null);
+  const coverImage = useRef(null);
 
   const nextSlide = () => {
     if (carouselRef.current) {
@@ -88,6 +94,34 @@ export default function Home() {
         "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80",
     },
   ];
+  useEffect(() => {
+    gsap.fromTo(
+      heading.current,
+      { opacity: 0, y: 50 }, // initial state
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out" } // animation
+    );
+  }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      headingText.current,
+      { opacity: 0, y: 50 }, // initial state
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.3 } // animation
+    );
+  }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      headingButton.current,
+      { opacity: 0, y: 50 }, // initial state
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.5 } // animation
+    );
+  }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      coverImage.current,
+      { opacity: 0, y: 50 }, // initial state
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.7 } // animation
+    );
+  }, []);
 
   return (
     <>
@@ -107,17 +141,25 @@ export default function Home() {
       <main className="pl-20">
         {/* Hero */}
         <section className="flex items-start justify-between pr-20">
-          <div className="pt-10 w-[40%] flex flex-col space-y-8">
-            <h1 className="text-8xl font-[700]">
+          <div className="pt-25 w-[40%] flex flex-col space-y-16">
+            <h1
+              className="text-[7.125rem] max-xl:text-7xl xl:leading-26 font-[700]"
+              ref={heading}
+            >
               Make your every trip memorable
             </h1>
-            <p className="text-2xl font-medium text-black w-[80%]">
+            <p
+              className="text-3xl font-medium z-10 text-black w-[80%] max-xl:w-[150%] lg:bg-transparent overflow-visible"
+              ref={headingText}
+            >
               Plan, and get inspiration from our most affordable travel plans to
               have a memorable time
             </p>
-            <Button type="getStarted">Get Started</Button>
+            <div ref={headingButton}>
+              <Button type="getStarted">Get Started</Button>
+            </div>
           </div>
-          <div className="w-[60%]">
+          <div className="w-[60%]" ref={coverImage}>
             <img src={coverImg} className="w-full" alt="cover-img" />
           </div>
         </section>
@@ -210,7 +252,8 @@ export default function Home() {
           <button className="gradient-btn rounded-full text-lg py-3 px-8">
             Subscribe
           </button>
-        </section>x
+        </section>
+        x
       </section>
 
       {/* Footer */}
